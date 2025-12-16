@@ -1,0 +1,27 @@
+name: Music Cache Warmer
+
+on:
+  # 允许手动在 GitHub 网页上点击运行
+  workflow_dispatch:
+  # 定时任务
+  schedule:
+    # GitHub Actions 使用 UTC 时间
+    # UTC 20:00 = 北京时间次日 04:00
+    - cron: '0 20 * * *'
+
+jobs:
+  warmup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 设置 Node.js 环境
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      # 运行脚本
+      - name: Run Warmup Script
+        run: node warmup.js
