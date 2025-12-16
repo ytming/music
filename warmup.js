@@ -2,7 +2,7 @@ const https = require('https');
 
 // ================= 配置区域 =================
 // 换成你那个生成列表的 Worker 地址
-const LIST_API = 'https://music.tming.cn'; 
+const LIST_API = 'https://music-api.tming.cn'; 
 // 并发数（建议 5-10，不要太高）
 const CONCURRENCY = 5;
 // ===========================================
