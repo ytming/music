@@ -1,2 +1,2 @@
 # music
-刷cloudflare的音乐缓存
+定时刷cloudflare的音乐缓存
